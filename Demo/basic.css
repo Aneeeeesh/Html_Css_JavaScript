@@ -1,0 +1,42 @@
+/*  ID selector has highest priority. It can overwrite class selector and 
+    element selector.
+    Inline styles specified in html code overwrites everything. 
+    Element selector starts with h1,h2 etc.
+*/
+
+#s1 {                       /* ID selector starts with # */
+    color: aquamarine;
+}
+
+#s2 {                       
+    font-family: 'Gill Sans';
+}
+
+.para {                     /* class selector starts with . */
+    color:blueviolet
+}
+
+h1 {
+    color: aliceblue;
+}
+
+body {                      /* affects whatever is under <body> tag in html */ 
+    text-align: center;
+}
+
+.s3 {
+    border: 3px solid red;
+    border-radius: 20px;
+    outline: 1px solid black;
+    margin: 1px 200px;
+}
+
+a:hover{
+    color:rgb(114, 200, 0);
+    text-decoration: underline;
+}
+
+a{
+    text-decoration: none;
+    list-style-type: none;
+}

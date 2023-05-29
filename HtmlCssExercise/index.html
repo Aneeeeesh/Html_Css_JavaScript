@@ -15,7 +15,7 @@
             <div class="details">
                 <div id="loginPage" style="display: block;">
                     <label class="records" for="loginEmail">Email address<sup> *</sup></label><br><br>
-                    <input class="inputs" id="loginEmail" type="text" placeholder=" Enter your email address" pattern="[a-z0-9]+@[a-z0-9]+\.[a-z]{2,}$" title="Please enter valid email" required>
+                    <input class="inputs" id="loginEmail" type="email" placeholder=" Enter your email address" pattern="[a-z0-9]+@[a-z0-9]+\.[a-z]{2,}$" title="Please enter valid email" required>
                     <br><br>
                     <label class="records" for="loginPass">Enter password<sup> *</sup></label><br><br>
                     <input class="inputs" id="loginPass" type="password" placeholder=" Enter password" required>
@@ -32,7 +32,8 @@
                 <div id="successLoginPage" style="display: none;">
                     <p id="bantr">Login Successful!!</p>
                     <p class="records" style="font-size: 16px;">
-                        <button onclick="deleteUser()">Delete user</button>
+                        <button onclick="deleteUser()">Delete User</button>
+                        <!-- <button onclick="updateUser()">Update User</button> -->
                     </p>
                 </div>
                 </div>

@@ -16,7 +16,16 @@
       "Name": "Deepak",
       "DOB": "1997-05-21",
       "Gender": "Male",
-      "Mobile": "9876543210"
+      "Mobile": "1234988890"
+    },
+    {
+      "Email": "lakshmy",
+      "Password": "pass3",
+      "Name": "Lakshmy",
+      "DOB": "2001-05-15",
+      "Gender": "Female",
+      "Mobile": "1253678456",
+      "id": 3
     }
   ]
 }

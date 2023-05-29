@@ -88,7 +88,7 @@ const deleteUser = () => {
         method: 'DELETE'
     })
     .then(response => {
-        if(confirm("Are you sure to delete?")){
+        if(response.ok){
             alert('User deleted successfully');
             window.location.replace("index.html");
         }
@@ -100,6 +100,31 @@ const deleteUser = () => {
         console.error('Error:',error);
     });
 }
+
+// const updateUser = () => {
+//     window.location.assign("signupPage.html");
+//     document.getElementById("bantr").innerHTML="Edit user";
+//     document.getElementById("signupName").value=currentUser.Name;
+//     let updatedUser = {
+        
+//     }
+//     let userId = currentUser.id;
+//     fetch(`${url}/${userId}`,{
+//         method: 'PUT',
+//         headers:{
+//             'Content-Type':'application/json'
+//         },
+//         body: JSON.stringify(newUser)
+//     })
+//     .then(response => response.json())
+//     .then(data => {
+//         console.log("New user added: " ,data);
+//         showSuccessSignupPage(newUser);
+//     })
+//     .catch(error => {
+//         console.error('Error:',error);
+//     });
+// }
 
 const showSuccessLoginPage = (user) => {
     currentUser = user;

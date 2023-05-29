@@ -4,43 +4,35 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width ,initial-scale=1">
         <link rel="stylesheet" href="index_styles.css">
-        <title> Bantr - Registration</title>
+        <script src="script.js"></script>
+        <title> Bantr - Login</title>
     </head>
     <body>
         <header>
-            <h1 id="bantr">Bantr</h1>
+            <h1 id="bantr">Welcome to Bantr.</h1>
         </header>
         <div class="mainbox">
             <div class="details">
-               <label class="records" for="fname">First name<sup>*</sup></label><br><br>
-               <input class="inputs" id="fname" type="text" placeholder=" Enter your first name" required>
-               <br><br>
-               <label class="records" for="lname">Last name<sup>*</sup></label><br><br>
-               <input class="inputs" id="lname" type="text" placeholder=" Enter your last name" required>
-               <br><br>
-               <label class="records" for="email">Email address<sup>*</sup></label><br><br>
-               <input class="inputs" id="email" type="email" placeholder=" Enter valid email address" pattern="[a-z0-9]+@[a-z0-9]+\.[a-z]{2,}$" required>
-               <br><br>
-               <label class="records" for="dob">Date of birth<sup>*</sup></label><br><br>
-               <input class="inputs" id="dob" type="date" required>
-               <br><br>
-               <label class="records" for="gender">Gender<sup>*</sup><br><br>
-                    <select id="gender" class="inputs" required>
-                        <option style="color: rgb(126, 126, 126);"> Select</option>
-                        <option> Female</option>
-                        <option> Male</option>
-                        <option> Other</option>
-                    </select>
-                </label>
-               <br><br><br><br>
-               <form action="index.html">
-                <button class="inputs">
-                    Register
-                </button>
-               </form>
-               
+                <div id="loginPage" style="display: block;">
+                    <label class="records" for="loginEmail">Email address<sup> *</sup></label><br><br>
+                    <input class="inputs" id="loginEmail" type="text" placeholder=" Enter your email address" pattern="[a-z0-9]+@[a-z0-9]+\.[a-z]{2,}$" title="Please enter valid email" required>
+                    <br><br>
+                    <label class="records" for="loginPass">Enter password<sup> *</sup></label><br><br>
+                    <input class="inputs" id="loginPass" type="password" placeholder=" Enter password" required>
+                    <br><br><br>
+                    <button class="inputs" onclick="verify('login')">
+                        Login
+                     </button>
+                     <br>
+                     <p class="records" style="font-size: 16px;">
+                        Don't have an account? <a href="signupPage.html">Sign up</a>
+                     </p>
+                     <span id="emailNotFound" class="records" style="display: none;font-size: 16px;color: red;">Invalid Email/Password!</span>
+                </div>
+                <div id="successLoginPage" style="display: none;">
+                    <p id="bantr">Login Successful!!</p>
+                </div>
             </div>
         </div>
     </body>
-
 </html>

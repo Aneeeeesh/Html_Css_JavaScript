@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "Email": "aneesh",
+      "Password": "pass1",
+      "Name": "Aneesh",
+      "DOB": "2001-01-28",
+      "Gender": "Male",
+      "Mobile": "1234567890"
+    },
+    {
+      "id": 2,
+      "Email": "deepak",
+      "Password": "pass2",
+      "Name": "Deepak",
+      "DOB": "1997-05-21",
+      "Gender": "Male",
+      "Mobile": "9876543210"
+    },
+    {
+      "Email": "adhi",
+      "Password": "pass3",
+      "Name": "Adhithyan",
+      "DOB": "2004-08-28",
+      "Gender": "Male",
+      "Mobile": "9375694601",
+      "id": 3
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 let url = "http://localhost:3000/users";
-let jsonData;
+let jsonData, currentUser;
 
 //Fetching data from db.json through server
 fetch(url)
@@ -25,7 +25,7 @@ const login = () => {
         if(inputEmail !== user.Email || inputPass !== user.Password){
             document.getElementById("emailNotFound").style.display = "block";
         }
-        else showSuccessLoginPage(user.Name);
+        else showSuccessLoginPage(user);
     }
 }
 
@@ -74,21 +74,43 @@ const signup = () => {
     .then(response => response.json())
     .then(data => {
         console.log("New user added: " ,data);
-        showSuccessSignupPage(newUser.Name);
+        showSuccessSignupPage(newUser);
     })
     .catch(error => {
         console.error('Error:',error);
     });
 }
 
-const showSuccessLoginPage = (name) => {
-    document.getElementById("loginPage").style.display = "none";
-    document.getElementById("successLoginPage").style.display = "block";
-    document.getElementById("bantr").innerHTML=`Welcome back, ${name}!!`;
+const deleteUser = () => {
+    // alert(currentUser.id);
+    let userId = currentUser.id;
+    fetch(`${url}/${userId}`, {
+        method: 'DELETE'
+    })
+    .then(response => {
+        if(confirm("Are you sure to delete?")){
+            alert('User deleted successfully');
+            window.location.replace("index.html");
+        }
+        else{
+            console.log('Error:',response.statusText);
+        }
+    })
+    .catch(error => {
+        console.error('Error:',error);
+    });
 }
 
-const showSuccessSignupPage = (name) => {
+const showSuccessLoginPage = (user) => {
+    currentUser = user;
+    document.getElementById("loginPage").style.display = "none";
+    document.getElementById("successLoginPage").style.display = "block";
+    document.getElementById("bantr").innerHTML=`Welcome back, ${user.Name}!!`;
+}
+
+const showSuccessSignupPage = (user) => {
+    currentUser = user;
     document.getElementById("signupPage").style.display = "none";
     document.getElementById("successSignupPage").style.display = "block";
-    document.getElementById("bantr").innerHTML=`Welcome to Bantr, ${name}!!`;
+    document.getElementById("bantr").innerHTML=`Welcome to Bantr, ${user.Name}!!`;
 }

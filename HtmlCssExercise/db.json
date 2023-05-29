@@ -17,24 +17,6 @@
       "DOB": "1997-05-21",
       "Gender": "Male",
       "Mobile": "9876543210"
-    },
-    {
-      "Email": "adhi",
-      "Password": "pass3",
-      "Name": "Adhithyan",
-      "DOB": "2004-08-28",
-      "Gender": "Male",
-      "Mobile": "9375694601",
-      "id": 3
-    },
-    {
-      "Email": "lakshmy",
-      "Password": "pass4",
-      "Name": "Lakshmy",
-      "DOB": "2001-05-15",
-      "Gender": "Female",
-      "Mobile": "9998887776",
-      "id": 4
     }
   ]
 }

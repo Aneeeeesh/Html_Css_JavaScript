@@ -1,4 +1,3 @@
-let users = [];
 let url = "http://localhost:3000/users";
 
 //Fetching data from db.json through server

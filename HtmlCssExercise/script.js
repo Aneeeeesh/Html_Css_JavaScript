@@ -1,24 +1,18 @@
 let url = "http://localhost:3000/users";
+let jsonData;
 
 //Fetching data from db.json through server
-const verify = (action) => {
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            switch(action){
-                case 'login': login(data);
-                                break;
-                case 'signup': signup(data)
-                                break;
-            }
-        })
-        .catch(error => {
-            console.error('Error:',error);
-        });
-}
+fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        jsonData = data;
+    })
+    .catch(error => {
+        console.error('Error:',error);
+    });
 
 //logging in using validation
-const login = (jsonData) => {
+const login = () => {
     const inputEmail = document.getElementById("loginEmail").value;
     const inputPass = document.getElementById("loginPass").value;
 
@@ -36,7 +30,7 @@ const login = (jsonData) => {
 }
 
 //signing up
-const signup = (jsonData) => {
+const signup = () => {
     const newName = document.getElementById("signupName").value;
     const newEmail = document.getElementById("signupEmail").value;
     const newDob = document.getElementById("signupDob").value;
@@ -80,7 +74,7 @@ const signup = (jsonData) => {
     .then(response => response.json())
     .then(data => {
         console.log("New user added: " ,data);
-        showSuccessSignupPage();
+        showSuccessSignupPage(newUser.Name);
     })
     .catch(error => {
         console.error('Error:',error);
@@ -93,7 +87,8 @@ const showSuccessLoginPage = (name) => {
     document.getElementById("bantr").innerHTML=`Welcome back, ${name}!!`;
 }
 
-const showSuccessSignupPage = () => {
+const showSuccessSignupPage = (name) => {
     document.getElementById("signupPage").style.display = "none";
     document.getElementById("successSignupPage").style.display = "block";
+    document.getElementById("bantr").innerHTML=`Welcome to Bantr, ${name}!!`;
 }

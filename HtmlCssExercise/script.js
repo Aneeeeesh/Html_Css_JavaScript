@@ -81,9 +81,12 @@ const signup = () => {
     });
 }
 
+//delete
 const deleteUser = () => {
     // alert(currentUser.id);
     let userId = currentUser.id;
+    if(!confirm("Are you sure?"))
+        return;
     fetch(`${url}/${userId}`, {
         method: 'DELETE'
     })
@@ -101,30 +104,52 @@ const deleteUser = () => {
     });
 }
 
-// const updateUser = () => {
-//     window.location.assign("signupPage.html");
-//     document.getElementById("bantr").innerHTML="Edit user";
-//     document.getElementById("signupName").value=currentUser.Name;
-//     let updatedUser = {
-        
-//     }
-//     let userId = currentUser.id;
-//     fetch(`${url}/${userId}`,{
-//         method: 'PUT',
-//         headers:{
-//             'Content-Type':'application/json'
-//         },
-//         body: JSON.stringify(newUser)
-//     })
-//     .then(response => response.json())
-//     .then(data => {
-//         console.log("New user added: " ,data);
-//         showSuccessSignupPage(newUser);
-//     })
-//     .catch(error => {
-//         console.error('Error:',error);
-//     });
-// }
+//update
+const updatePage = () => {
+    document.getElementById("successLoginPage").style.display = "none";
+    document.getElementById("editProfilePage").style.display = "block";
+    document.getElementById("bantr").innerHTML="Edit profile";
+
+    document.getElementById("editName").value=currentUser.Name;
+    document.getElementById("editEmail").value=currentUser.Email;
+    document.getElementById("editDob").value=currentUser.DOB;
+    document.getElementById("editGender").value=currentUser.Gender;
+    document.getElementById("editMob").value=currentUser.Mobile;
+} 
+
+const update = () => {
+    let oldPass = prompt("Enter old password: ");
+    if(oldPass !== currentUser.Password){
+        alert("Wrong password!");
+        return;
+    }
+    let updatedUser = {
+        Email: document.getElementById("editEmail").value, 
+        Password: document.getElementById("editPass").value,
+        Name: document.getElementById("editName").value,
+        DOB: document.getElementById("editDob").value,
+        Gender: document.getElementById("editGender").value,
+        Mobile: document.getElementById("editMob").value,
+    }
+    let userId = currentUser.id;
+    fetch(`${url}/${userId}`,{
+        method: 'PUT',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify(updatedUser)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("Updated user: " ,data);
+    })
+    .catch(error => {
+        console.error('Error:',error);
+    });
+    alert("Updated successfully!");
+    document.getElementById("editProfilePage").style.display = "none";
+    document.getElementById("loginPage").style.display = "block";
+}
 
 const showSuccessLoginPage = (user) => {
     currentUser = user;

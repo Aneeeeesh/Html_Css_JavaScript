@@ -29,13 +29,46 @@
                      </p>
                      <span id="emailNotFound" class="records" style="display: none;font-size: 16px;color: red;">Invalid Email/Password!</span>
                 </div>
+
                 <div id="successLoginPage" style="display: none;">
                     <p id="bantr">Login Successful!!</p>
                     <p class="records" style="font-size: 16px;">
                         <button onclick="deleteUser()">Delete User</button>
-                        <!-- <button onclick="updateUser()">Update User</button> -->
+                        <button onclick="updatePage()">Update User</button>
                     </p>
                 </div>
+
+                <div id="editProfilePage" style="display: none;">
+                    <label class="records" for="editName">Name<sup> *</sup></label><br><br>
+                    <input class="inputs" id="editName" type="text" placeholder=" Enter your name" required>
+                    <br><br>
+                    <label class="records" for="editEmail">Email address<sup> *</sup></label><br><br>
+                    <input class="inputs" id="editEmail" type="email" placeholder=" Enter valid email address" pattern="[a-z0-9]+@[a-z0-9]+\.[a-z]{2,}$" required>
+                    <span id="emailExists" class="records" style="display: none;font-size: 16px;color: red;">Email already exists!</span>
+                    <br><br>
+                    <label class="records" for="editDob">Date of birth<sup> *</sup></label><br><br>
+                    <input class="inputs" id="editDob" type="date" required>
+                    <br><br>
+                    <label class="records" for="editGender">Gender<sup> *</sup><br><br>
+                            <select id="editGender" class="inputs" required>
+                                <option style="color: rgb(126, 126, 126);"> Select</option>
+                                <option> Female</option>
+                                <option> Male</option>
+                                <option> Other</option>
+                            </select>
+                        </label>
+                        <br><br>
+                    <label class="records" for="editMob">Mobile Number<sup> *</sup></label><br><br>
+                    <input class="inputs" id="editMob" type="tel" placeholder=" 10 digit mobile number" pattern="[0-9]{10}" required>
+                    <span id="mobInvalid" class="records" style="display: none;font-size: 16px;color: red;">Invalid phone number</span>
+                    <br><br>
+                    <label class="records" for="editPass">Enter password<sup> *</sup></label><br><br>
+                    <input class="inputs" id="editPass" type="password" placeholder=" Enter new password" required>
+                    <br>
+                    <br><br><br>
+                    <button class="inputs" onclick="update()">
+                        Update profile
+                    </button>
                 </div>
             </div>
         </div>

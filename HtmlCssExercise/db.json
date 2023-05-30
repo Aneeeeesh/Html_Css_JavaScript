@@ -26,6 +26,24 @@
       "Gender": "Female",
       "Mobile": "1253678456",
       "id": 3
+    },
+    {
+      "Email": "adhi",
+      "Password": "123",
+      "Name": "adhi",
+      "DOB": "2004-05-06",
+      "Gender": "Male",
+      "Mobile": "8983474897",
+      "id": 4
+    },
+    {
+      "Email": "sunanth",
+      "Password": "111",
+      "Name": "Sunanth",
+      "DOB": "2001-04-23",
+      "Gender": "Male",
+      "Mobile": "9999999999",
+      "id": 5
     }
   ]
 }

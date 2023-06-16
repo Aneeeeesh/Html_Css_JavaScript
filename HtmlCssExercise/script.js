@@ -25,7 +25,7 @@ const login = () => {
         if(inputEmail !== user.Email || inputPass !== user.Password){
             document.getElementById("emailNotFound").style.display = "block";
         }
-        else showSuccessLoginPage(user);
+        else switchPage("loginPage","successLoginPage","Welcome back",user);
     }
 }
 
@@ -74,7 +74,7 @@ const signup = () => {
     .then(response => response.json())
     .then(data => {
         console.log("New user added: " ,data);
-        showSuccessSignupPage(newUser);
+        switchPage("signupPage","successSignupPage","Welcome to Bantr",newUser);
     })
     .catch(error => {
         console.error('Error:',error);
@@ -151,16 +151,23 @@ const update = () => {
     document.getElementById("loginPage").style.display = "block";
 }
 
-const showSuccessLoginPage = (user) => {
+const switchPage = (fromPage,toPage,newHeading,user) =>{
     currentUser = user;
-    document.getElementById("loginPage").style.display = "none";
-    document.getElementById("successLoginPage").style.display = "block";
-    document.getElementById("bantr").innerHTML=`Welcome back, ${user.Name}!!`;
-}
+    document.getElementById(fromPage).style.display = "none";
+    document.getElementById(toPage).style.display = "block";
+    document.getElementById("bantr").innerHTML= newHeading + `, ${user.Name}!!`;
+}   
 
-const showSuccessSignupPage = (user) => {
-    currentUser = user;
-    document.getElementById("signupPage").style.display = "none";
-    document.getElementById("successSignupPage").style.display = "block";
-    document.getElementById("bantr").innerHTML=`Welcome to Bantr, ${user.Name}!!`;
-}
+// const showSuccessLoginPage = (user) => {
+//     currentUser = user;
+//     document.getElementById("loginPage").style.display = "none";
+//     document.getElementById("successLoginPage").style.display = "block";
+    // document.getElementById("bantr").innerHTML=`Welcome back, ${user.Name}!!`;
+// }
+
+// const showSuccessSignupPage = (user) => {
+//     currentUser = user;
+//     document.getElementById("signupPage").style.display = "none";
+//     document.getElementById("successSignupPage").style.display = "block";
+//     document.getElementById("bantr").innerHTML=`Welcome to Bantr, ${user.Name}!!`;
+// }

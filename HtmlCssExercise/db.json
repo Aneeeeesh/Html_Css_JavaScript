@@ -39,11 +39,20 @@
     {
       "Email": "aravind",
       "Password": "111",
-      "Name": "Sunanth",
-      "DOB": "2001-04-23",
+      "Name": "Aravind",
+      "DOB": "2001-06-01",
       "Gender": "Male",
       "Mobile": "9999999999",
       "id": 5
+    },
+    {
+      "Email": "anand",
+      "Password": "anand",
+      "Name": "anand",
+      "DOB": "2001-11-20",
+      "Gender": "Male",
+      "Mobile": "7895673452",
+      "id": 6
     }
   ]
 }

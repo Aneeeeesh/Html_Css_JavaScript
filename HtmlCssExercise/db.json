@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "Email": "aneesh",
+      "Email": "aneesh@xyz.com",
       "Password": "pass1",
       "Name": "Aneesh",
       "DOB": "2001-01-28",
@@ -11,7 +11,7 @@
     },
     {
       "id": 2,
-      "Email": "deepak",
+      "Email": "deepak@xyz.com",
       "Password": "pass2",
       "Name": "Deepak",
       "DOB": "1997-05-21",
@@ -19,7 +19,7 @@
       "Mobile": "1234988890"
     },
     {
-      "Email": "lakshmy",
+      "Email": "lakshmy@xyz.com",
       "Password": "pass3",
       "Name": "Lakshmy",
       "DOB": "2001-05-15",
@@ -28,7 +28,7 @@
       "id": 3
     },
     {
-      "Email": "adhi",
+      "Email": "adhi@xyz.com",
       "Password": "123",
       "Name": "adhi",
       "DOB": "2004-05-06",
@@ -37,22 +37,13 @@
       "id": 4
     },
     {
-      "Email": "aravind",
-      "Password": "111",
-      "Name": "Aravind",
+      "Email": "aravind@xyz.com",
+      "Password": "aravind",
+      "Name": "Aravind Reghu",
       "DOB": "2001-06-01",
       "Gender": "Male",
       "Mobile": "9999999999",
       "id": 5
-    },
-    {
-      "Email": "anand",
-      "Password": "anand",
-      "Name": "Anand",
-      "DOB": "2001-11-20",
-      "Gender": "Male",
-      "Mobile": "6784563450",
-      "id": 6
     }
   ]
 }

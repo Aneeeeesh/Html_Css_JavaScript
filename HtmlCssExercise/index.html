@@ -13,7 +13,7 @@
         </header>
         <div class="mainbox">
             <div class="details">
-                <div id="loginPage" style="display: block;">
+                <form id="loginPage" style="display: block;">
                     <label class="records" for="loginEmail">Email address<sup> *</sup></label><br><br>
                     <input class="inputs" id="loginEmail" type="email" placeholder=" Enter your email address" pattern="[a-z0-9]+@[a-z0-9]+\.[a-z]{2,}$" title="Please enter valid email" required>
                     <br><br>
@@ -28,7 +28,7 @@
                         Don't have an account? <a href="signupPage.html">Sign up</a>
                      </p>
                      <span id="emailNotFound" class="records" style="display: none;font-size: 16px;color: red;">Invalid Email/Password!</span>
-                </div>
+                </form>
 
                 <div id="successLoginPage" style="display: none;">
                     <p id="bantr">Login Successful!!</p>
@@ -39,7 +39,7 @@
                     </p>
                 </div>
 
-                <div id="editProfilePage" style="display: none;">
+                <form id="editProfilePage" style="display: none;">
                     <label class="records" for="editName">Name<sup> *</sup></label><br><br>
                     <input class="inputs" id="editName" type="text" placeholder=" Enter your name" required>
                     <br><br>
@@ -70,7 +70,7 @@
                     <button class="inputs" onclick="update()">
                         Update profile
                     </button>
-                </div>
+                </form>
             </div>
         </div>
     </body>

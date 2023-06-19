@@ -157,17 +157,3 @@ const switchPage = (fromPage,toPage,newHeading,user) =>{
     document.getElementById(toPage).style.display = "block";
     document.getElementById("bantr").innerHTML= newHeading + `, ${user.Name}!!`;
 }   
-
-// const showSuccessLoginPage = (user) => {
-//     currentUser = user;
-//     document.getElementById("loginPage").style.display = "none";
-//     document.getElementById("successLoginPage").style.display = "block";
-    // document.getElementById("bantr").innerHTML=`Welcome back, ${user.Name}!!`;
-// }
-
-// const showSuccessSignupPage = (user) => {
-//     currentUser = user;
-//     document.getElementById("signupPage").style.display = "none";
-//     document.getElementById("successSignupPage").style.display = "block";
-//     document.getElementById("bantr").innerHTML=`Welcome to Bantr, ${user.Name}!!`;
-// }
